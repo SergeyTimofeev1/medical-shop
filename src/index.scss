@@ -1,5 +1,9 @@
-@import 'libs/normalize';
-@import 'libs/reset';
-@import 'style/fonts';
-@import 'style/var';
-@import 'style/style';
+@import "libs/reset";
+@import "libs/normalize";
+@import "style/mixins/adaptiv-value";
+@import "style/fonts";
+@import "style/var";
+@import "style/style";
+@import "style/buttons";
+@import "style/blocks/navbar";
+@import "style/blocks/header";

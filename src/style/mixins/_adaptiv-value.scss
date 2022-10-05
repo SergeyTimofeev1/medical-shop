@@ -1,0 +1,10 @@
+// Адаптивное свойство для размеров блоков
+$maxWidth: 1920; // Максимальная ширина экрана
+$maxWidthContainer: 1140; // Ширина контейнера по макету
+
+@mixin adaptiv-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: calc(
+    #{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320}))
+  );
+}

@@ -1,4 +1,12 @@
 body {
-  font-family: 'GT Eesti Pro', sans-serif;
+  font-family: "GT Eesti Pro Display", sans-serif;
+  font-weight: 350;
 }
 
+.container {
+  @include adaptiv-value("width", 1140, 600);
+  // width: 1140px;
+  display: block;
+  margin: 0 auto;
+  padding: 0 5px;
+}

@@ -1,0 +1,26 @@
+.navbar {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__item-link {
+    height: 52px;
+    padding-top: calc((52px / 2) - 8px);
+    @include adaptiv-value("font-size", 16, 10);
+  }
+  &__item:nth-child(1),
+  &__item:nth-child(3) {
+    padding: 0 15px 0 0;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      content: url("img/main-header/navbar-arrow.svg");
+    }
+  }
+  &__item--active {
+    background-color: $main-blue;
+  }
+}
