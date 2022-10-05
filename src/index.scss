@@ -1,9 +1,18 @@
+// Обнуление
 @import "libs/reset";
 @import "libs/normalize";
+// Миксины
 @import "style/mixins/adaptiv-value";
-@import "style/fonts";
+// Переменные
 @import "style/var";
+// Базовые стили
+@import "style/fonts";
 @import "style/style";
+// Повторяющиеся правила стилей и элементы
 @import "style/buttons";
+@import "style/flex";
+// Секции сайта
 @import "style/blocks/navbar";
 @import "style/blocks/header";
+@import "style/blocks/medical-equipment";
+@import "style/blocks/catalog-item";

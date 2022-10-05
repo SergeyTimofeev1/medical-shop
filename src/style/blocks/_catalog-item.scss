@@ -1,0 +1,41 @@
+.catalog {
+  padding: 100px 0;
+  @include adaptiv-value("padding-top", 100, 35);
+  @include adaptiv-value("padding-bottom", 100, 35);
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiv-value("gap", 30, 20);
+    @media (max-width: 641px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.catalog-item {
+  @include adaptiv-value("width", 555, 290);
+  @include adaptiv-value("height", 275, 219);
+  background-image: url("img/catalog/catalog-item.png");
+  background-color: #f4f6fa;
+  padding: 30px 0 34px 33px;
+  @include adaptiv-value("padding-right", 261, 100);
+  @extend %flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  &__descr {
+    color: rgba(51, 51, 51, 0.8);
+    line-height: 21px;
+    font-weight: 350;
+  }
+  &__button {
+    margin-top: auto;
+    @extend %catalog-button;
+  }
+}

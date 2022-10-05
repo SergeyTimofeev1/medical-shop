@@ -7,6 +7,7 @@
   &__item-link {
     height: 52px;
     padding-top: calc((52px / 2) - 8px);
+    padding-left: 3px;
     @include adaptiv-value("font-size", 16, 10);
   }
   &__item:nth-child(1),

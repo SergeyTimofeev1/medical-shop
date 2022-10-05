@@ -1,0 +1,46 @@
+.medical-equipment {
+  background: #f4f6fa;
+  max-height: 625px;
+  @include adaptiv-value("padding-top", 83, 13);
+  @include adaptiv-value("padding-bottom", 180, 140);
+  border-bottom: 1px dashed $second-color;
+  &__inner {
+    @extend %flex;
+  }
+  &__title {
+    font-weight: 100;
+    @include adaptiv-value("font-size", 43, 36);
+    @include adaptiv-value("width", 673, 310);
+    line-height: 63px;
+    & span {
+      font-weight: 900;
+      @media (max-width: 800px) {
+        display: block;
+      }
+    }
+  }
+  &__descr {
+    @include adaptiv-value("font-size", 18, 16);
+    @include adaptiv-value("width", 640, 310);
+    margin-bottom: 30px;
+  }
+  &__button {
+    @extend %large-main-button;
+  }
+}
+
+.medical-slider {
+  position: relative;
+  &__btn-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: url("img/medical-equipment/slider-arrow-left.svg");
+  }
+  &__btn-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: url("img/medical-equipment/slider-arrow-right.svg");
+  }
+}
