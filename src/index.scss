@@ -1,8 +1,10 @@
+
 // Обнуление
 @import "libs/reset";
 @import "libs/normalize";
 // Миксины
 @import "style/mixins/adaptiv-value";
+@import "style/mixins/media";
 // Переменные
 @import "style/var";
 // Базовые стили
@@ -16,3 +18,4 @@
 @import "style/blocks/header";
 @import "style/blocks/medical-equipment";
 @import "style/blocks/catalog-item";
+@import "style/blocks/about";

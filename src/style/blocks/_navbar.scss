@@ -25,3 +25,18 @@
     background-color: $main-blue;
   }
 }
+
+.navbar-mobile {
+  display: none;
+  width: 18px;
+  span {
+    border: 1px solid $main-color;
+    display: block;
+  }
+  &__line + .navbar-mobile__line {
+    margin-top: 3px;
+  }
+  @include media($tablet) {
+    display: block;
+  }
+}

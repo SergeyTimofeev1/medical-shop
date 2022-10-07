@@ -1,3 +1,9 @@
+.header {
+  @include media($tablet) {
+    background-color: $main-bcg-color;
+  }
+}
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -14,15 +20,27 @@
   &__work-time,
   &__phone {
     @include adaptiv-value("font-size", 16, 10);
+    @media (max-width: 769px) {
+      display: none;
+    }
   }
   &__button {
     @extend %small-main-button;
+    @include media($tablet) {
+      display: none;
+    }
   }
 }
 
 .bottom-header {
   color: #fff;
   background-color: $dark-color;
+  @include media($tablet) {
+    display: none;
+  }
+  & .container {
+    padding-left: 0;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -35,6 +53,7 @@
     border-radius: 2px;
     color: rgba(52, 52, 52, 1);
     position: relative;
+    -webkit-appearance: searchfield;
     &::placeholder {
       font-size: 14px;
       line-height: 16px;

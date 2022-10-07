@@ -4,13 +4,17 @@ body {
 }
 
 .container {
-  @include adaptiv-value("width", 1140, 600);
-  // width: 1140px;
+  // @include adaptiv-value("max-width", 1140, 600);
+  max-width: 1140px;
   display: block;
   margin: 0 auto;
   padding: 0 5px;
+  @include media($tablet) {
+    padding: 0;
+    max-width: 688px;
+  }
 }
 // Селекторы аттрибута
-[class*="title"] {
+[class*="__title"] {
   text-transform: uppercase;
 }

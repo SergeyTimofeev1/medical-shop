@@ -1,7 +1,7 @@
 @use "sass:math";
 
 %small-main-button {
-  width: 150px;
+  width: 155px;
   height: 40px;
   background-color: $main-blue;
   border-radius: 100px;
@@ -15,6 +15,10 @@
     cursor: pointer;
     background-color: rgba(0, 180, 220, 0.8);
   }
+}
+
+.small-main-button {
+  @extend %small-main-button;
 }
 
 %large-main-button {
@@ -32,6 +36,10 @@
     cursor: pointer;
     background-color: rgba(0, 180, 220, 0.8);
   }
+}
+
+.large-main-button {
+  @extend %large-main-button;
 }
 
 %catalog-button {
@@ -52,4 +60,8 @@
     border-color: $main-blue;
     color: $main-blue;
   }
+}
+
+.catalog-button {
+  @extend %catalog-button;
 }
