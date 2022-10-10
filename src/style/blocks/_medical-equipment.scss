@@ -54,15 +54,13 @@
   position: relative;
   @include adaptiv-value("margin-bottom", 55, 10);
   &__btn-left {
-    position: absolute;
+    @extend %arrow-left;
     top: 50%;
     left: 0;
-    content: url("img/medical-equipment/slider-arrow-left.svg");
   }
   &__btn-right {
-    position: absolute;
+    @extend %arrow-right;
     top: 50%;
     right: 0;
-    content: url("img/medical-equipment/slider-arrow-right.svg");
   }
 }

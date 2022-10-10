@@ -65,3 +65,15 @@
 .catalog-button {
   @extend %catalog-button;
 }
+
+// Arrows
+
+%arrow-left {
+  position: absolute;
+  content: url("img/medical-equipment/slider-arrow-left.svg");
+}
+
+%arrow-right {
+  position: absolute;
+  content: url("img/medical-equipment/slider-arrow-right.svg");
+}
