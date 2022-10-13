@@ -4,6 +4,7 @@
   background-size: cover;
   padding: 84px 0 102px;
   text-align: left;
+  @include adaptiv-value("margin-bottom", 88, 35);
   & .container {
     @include adaptiv-value("padding-left", 40, 15);
     @include adaptiv-value("padding-right", 40, 15);
