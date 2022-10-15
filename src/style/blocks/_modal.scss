@@ -11,6 +11,8 @@
   &__window {
     @extend %flex;
     width: 800px;
+    max-height: 437px;
+    overflow-y: auto;
     position: relative;
     margin: 0 auto;
     top: 15%;
