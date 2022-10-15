@@ -1,0 +1,148 @@
+.modal {
+  &__overlay {
+    position: fixed;
+    display: flex;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.25);
+  }
+  &__window {
+    @extend %flex;
+    width: 800px;
+    position: relative;
+    margin: 0 auto;
+    top: 15%;
+    @include media(830px) {
+      width: 690px;
+      top: 5%;
+    }
+    @include media(741px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.modal__right {
+  text-align: center;
+  max-height: 437px;
+  background-color: $main-bcg-color;
+  display: flex;
+  flex-direction: column;
+  padding: 54px 68px;
+  @include media(741px) {
+    width: 400px;
+    padding: 16px 13px 28px;
+  }
+  @include media(390px) {
+    width: 290px;
+    padding: 16px 13px 28px;
+  }
+  &-img {
+    width: 135px;
+    height: 235px;
+    margin: 0 auto 24px auto;
+    @include media(741px) {
+      display: none;
+    }
+  }
+  &-title {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 31px;
+    color: #333333;
+  }
+  &-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.modal-form {
+  color: rgba(66, 66, 66, 1);
+  &__title {
+    @include adaptiv-value("font-size", 22, 18);
+    font-weight: 500;
+    line-height: 26px;
+    color: #333333;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    @include adaptiv-value("font-size", 16, 14);
+    font-weight: 350;
+    line-height: 21px;
+    margin-bottom: 18px;
+    font-weight: 350;
+  }
+  &__input-wrapper {
+    @extend %input-wrapper;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+  }
+  &__input-wrapper.name,
+  &__input-wrapper.phone,
+  &__input-wrapper.email {
+    &::before {
+      left: 15px;
+      content: url("./img/modal/email-ico.svg");
+    }
+  }
+  &__input-wrapper.name {
+    &::before {
+      content: (url("./img/modal/person-icon.svg"));
+    }
+  }
+  &__input-wrapper.phone {
+    &::before {
+      content: (url("./img/modal/phone-icon.svg"));
+    }
+  }
+  &__input {
+    @extend %input;
+    width: 250px;
+    background: #fcfcfc;
+    border: 1px solid #e3e8ef;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  &__button {
+    @extend %small-main-button;
+    width: 250px;
+    height: 40px;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  &__confi {
+    width: 256px;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 132.5%;
+    color: #000000;
+    span > a {
+      text-decoration: underline;
+      cursor: pointer;
+      color: #000000;
+    }
+    @include media(741px) {
+      width: auto;
+    }
+  }
+}
+
+.modal__left {
+  width: 400px;
+  background-color: #fff;
+  padding: 48px 55px;
+  height: 437px;
+  @include media(740px) {
+    margin: 0 auto;
+    padding: 40px 22px;
+    text-align: center;
+  }
+  @include media(390px) {
+    width: 290px;
+  }
+}

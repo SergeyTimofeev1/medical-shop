@@ -15,6 +15,15 @@
     @extend %flex;
     align-items: center;
     min-height: 53px;
+    @include media(400px) {
+      flex-direction: column;
+    }
+    &-text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 21px;
+      color: #ffffff;
+    }
   }
   & hr {
     height: 1px;
@@ -48,6 +57,12 @@
 .footer-nav {
   @extend %flex;
   align-items: flex-start;
+  @include media(540px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 41px;
+  }
   &__list {
     position: relative;
     font-size: 14px;
@@ -65,10 +80,6 @@
       width: 2px;
       background-color: #fff;
     }
-    @include media(1013px) {
-      width: 33%;
-      margin-bottom: 40px;
-    }
     &:nth-child(1)::before {
       @include media(1013px) {
         position: relative;
@@ -79,6 +90,19 @@
         padding-left: 0;
       }
     }
+    @include media(1013px) {
+      width: 33%;
+      margin-bottom: 40px;
+    }
+    @include media(540px) {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 26px;
+      &::before {
+        position: relative;
+      }
+    }
   }
   &__subtitle {
     font-weight: 500;
@@ -86,6 +110,13 @@
     line-height: 16px;
     color: #fff;
     margin-bottom: 15px;
+  }
+  &__item {
+    @include media(540px) {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
   }
   &__item + .footer-nav__item {
     margin-top: 8px;
@@ -98,6 +129,12 @@
     display: grid;
     grid-template-columns: 40% 60%;
     width: 100%;
+  }
+  @include media($tablet) {
+    padding: 0 10px;
+  }
+  @include media(540px) {
+    display: block;
   }
   &__title {
     font-weight: 500;
@@ -119,15 +156,10 @@
     }
   }
   &__input-wraper {
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
+    @extend %input-wrapper;
     &::before {
       content: url("./img/footer/email.svg");
-      position: absolute;
       left: 14px;
-      top: 50%;
-      transform: translateY(-50%);
     }
     @include media(1013px) {
       grid-column-start: 2;
@@ -136,10 +168,7 @@
   }
   &__input {
     @include adaptiv-value("width", 170, 100);
-    color: #bccad2;
-    background-color: #fff;
-    padding: 13px 0 13px 43px;
-    height: 40px;
+    @extend %input;
     @include media(1013px) {
       width: 100%;
     }

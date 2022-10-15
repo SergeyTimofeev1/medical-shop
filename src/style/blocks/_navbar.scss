@@ -1,4 +1,7 @@
 .navbar {
+  &__item {
+    cursor: pointer;
+  }
   &__items {
     display: flex;
     justify-content: space-between;

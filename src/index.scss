@@ -12,6 +12,7 @@
 // Повторяющиеся правила стилей и элементы
 @import "style/buttons";
 @import "style/flex";
+@import "style/input";
 // Секции сайта
 @import "style/blocks/navbar";
 @import "style/blocks/header";
@@ -23,3 +24,6 @@
 @import "style/blocks/products-slider";
 @import "style/blocks/products";
 @import "style/blocks/footer";
+
+// Модальное окно
+@import "style/blocks/modal";
