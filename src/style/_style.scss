@@ -1,11 +1,10 @@
 body {
   font-family: "GT Eesti Pro Display", sans-serif;
   font-weight: 350;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .container {
-  // @include adaptiv-value("max-width", 1140, 600);
   max-width: 1140px;
   display: block;
   margin: 0 auto;

@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     background-color: rgba(15, 15, 15, 0.25);
+    transition: opacity 0.3s ease-in;
   }
   &__window {
     @extend %flex;
@@ -16,12 +17,50 @@
     position: relative;
     margin: 0 auto;
     top: 15%;
+    height: 0;
+    // скрыть скролл
+    &::-webkit-scrollbar {
+      width: 0;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+    }
+    //  анимация
+    transition: all 0.5s ease-in;
     @include media(830px) {
       width: 690px;
       top: 5%;
     }
     @include media(741px) {
       flex-direction: column;
+      max-height: 511px;
+    }
+    &-close,
+    &-close-mobile {
+      position: absolute;
+      color: #333333;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 1%;
+      top: 2%;
+    }
+    &-close {
+      background: #fff;
+      right: 1%;
+      top: 2%;
+      display: flex;
+      @include media(741px) {
+        display: none;
+      }
+    }
+    &-close-mobile {
+      display: none;
+      @include media(741px) {
+        display: block;
+      }
     }
   }
 }
@@ -42,6 +81,9 @@
     padding: 16px 13px 28px;
   }
   &-img {
+    background: url("./img/modal/modal-item.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 135px;
     height: 235px;
     margin: 0 auto 24px auto;
@@ -50,14 +92,14 @@
     }
   }
   &-title {
+    @include adaptiv-value("font-size", 18, 16);
     font-weight: 300;
-    font-size: 16px;
     line-height: 31px;
     color: #333333;
   }
   &-text {
+    @include adaptiv-value("font-size", 24, 16);
     font-weight: 400;
-    font-size: 18px;
     line-height: 24px;
   }
 }
@@ -139,12 +181,42 @@
   background-color: #fff;
   padding: 48px 55px;
   height: 437px;
+  position: relative;
   @include media(740px) {
     margin: 0 auto;
-    padding: 40px 22px;
+    padding: 16px 22px;
     text-align: center;
   }
   @include media(390px) {
     width: 290px;
   }
+}
+
+// Для анимации модального окна
+
+.modal.open .modal__overlay,
+.modal.open .modal__window {
+  opacity: 1;
+  z-index: 1000;
+}
+.modal.open .modal__window {
+  height: 100%;
+}
+
+.modal.hide .modal__overlay,
+.modal.hide .modal__window {
+  opacity: 1;
+  z-index: 1000;
+}
+.modal.hide .modal__overlay {
+  opacity: 0;
+}
+.modal.hide .modal__window {
+  opacity: 0;
+}
+
+.modal__window,
+.modal__overlay {
+  opacity: 0;
+  z-index: -1;
 }

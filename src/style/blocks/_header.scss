@@ -33,6 +33,7 @@
 }
 
 .bottom-header {
+  height: 52px;
   color: #fff;
   background-color: $dark-color;
   @include media($tablet) {
