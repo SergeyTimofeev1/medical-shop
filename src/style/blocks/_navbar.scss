@@ -1,6 +1,7 @@
 .navbar {
   &__item {
     cursor: pointer;
+    transition: all 0.5s;
   }
   &__items {
     display: flex;
@@ -22,10 +23,15 @@
       top: 15px;
       right: 0;
       content: url("img/main-header/navbar-arrow.svg");
+      padding-left: 2px;
     }
   }
-  &__item--active {
+  &__item.active {
     background-color: $main-blue;
+    &::before {
+      transform: rotate(180deg);
+      top: 18px;
+    }
   }
 }
 

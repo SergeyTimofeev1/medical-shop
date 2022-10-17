@@ -30,7 +30,7 @@
           <div class="bottom-header__inner">
             <nav class="bottom-header__navbar navbar">
               <ul class="navbar__items">
-                <li class="navbar__item navbar__item-catalog navbar__item--active">
+                <li class="navbar__item navbar__item-catalog navbar__item">
                   <a class="navbar__item-link navbar__catalog-link" href="#">Открыть каталог</a>
                 </li>
                 <li class="navbar__item">
@@ -64,6 +64,58 @@
               <li class="bottom-header-catalog__item"><a class="bottom-header-catalog__link" href="#">Лабораторное и аналитическое оборудование</a></li>
             </ul>
           </div>
+        </div>
+      </div>
+      <!-- menu mobile -->
+      <div class="header__menu-mobile menu-mobile">
+        <div class="menu-mobile__inner">
+          <div class="menu-mobile__overlay"></div>
+          <div class="menu-mobile__navigate navigate-mobile">
+            <div class="navigate-mobile__input-wrapper">
+              <input class="navigate-mobile__input" type="text" placeholder="Поиск" />
+            </div>
+            <div class="navigate-mobile__buttons">
+              <button class="navigate-mobile__button-menu active">разделы</button>
+              <button class="navigate-mobile__button-catalog">Каталог</button>
+            </div>
+            <!-- Разделы -->
+            <nav class="navigate-mobile__menu navigate-menu active">
+              <ul class="navigate-menu__list">
+                <li class="navigate-menu__item"><a class="navigate-menu__link" href="#">О Компании</a></li>
+                <li class="navigate-menu__item"><a class="navigate-menu__link" href="#">Документы</a></li>
+                <li class="navigate-menu__item"><a class="navigate-menu__link" href="#">Наши проекты</a></li>
+                <li class="navigate-menu__item"><a class="navigate-menu__link" href="#">Контакты</a></li>
+              </ul>
+            </nav>
+            <!-- Каталог -->
+            <nav class="navigate-mobile__catalog navigate-catalog">
+              <ul class="navigate-catalog__list">
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Реанимация и интенсивная терапия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Дефибрилляторы</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Инфузионная терапия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Аспираторы</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Расходные материалы</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Хирургия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Акушерство, гинекология и неонатология</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Эндоскопия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Функциональная диагностика</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Травматология и ортопедия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Нейрохирургия</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Ультразвуковое оборудование</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Оториноларингология </a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Офтальмология</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Патологическая анатомия и судебная медицина</a></li>
+                <li class="navigate-catalog__item"><a class="navigate-catalog__list" href="#">Лабораторное и аналитическое оборудование</a></li>
+              </ul>
+            </nav>
+            <!-- Расписание -->
+            <div class="navigate-mobile__work-time"><span>Мы работаем:</span> пн-вс 9:00 - 19:00</div>
+            <div class="navigate-mobile__phone">
+              <span>Телефон:</span>
+              <a class="navigate-mobile__phone-link" href="tel:+78999999999"> +7 800 888 88 88 </a>
+            </div>
+          </div>
+          <button class="menu-mobile__inner-close">&times;</button>
         </div>
       </div>
     </header>
@@ -278,36 +330,21 @@
     </main>
     <!-- Footer -->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <div class="footer__contacts footer-contacts">
             <a class="footer-contacts__link" href="#">LOGO</a>
-            <p class="footer-contacts__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt.
-            </p>
+            <p class="footer-contacts__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
             <div class="footer-contacts__social">
               <a class="footer-contacts__social-link twitter" href="#">
-                <img
-                  class="footer-contacts__social-img"
-                  src="./img/footer/Twitter.svg"
-                  alt="footer-social-img"
-                />
+                <img class="footer-contacts__social-img" src="./img/footer/Twitter.svg" alt="footer-social-img" />
               </a>
               <a class="footer-contacts__social-link facebook" href="#">
-                <img
-                  class="footer-contacts__social-img"
-                  src="img/footer/Facebook.svg"
-                  alt="footer-social-img"
-                />
+                <img class="footer-contacts__social-img" src="img/footer/Facebook.svg" alt="footer-social-img" />
               </a>
               <a class="footer-contacts__social-link instagram" href="#">
-                <img
-                  class="footer-contacts__social-img"
-                  src="img/footer/instagram.svg"
-                  alt="footer-social-img"
-                />
+                <img class="footer-contacts__social-img" src="img/footer/instagram.svg" alt="footer-social-img" />
               </a>
             </div>
           </div>
@@ -345,19 +382,13 @@
             <ul class="footer-nav__list contacts">
               <h3 class="footer-nav__subtitle">КОНТАКТЫ</h3>
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="email:info@form.com"
-                  >info@form.com</a
-                >
+                <a class="footer-nav__link" href="email:info@form.com">info@form.com</a>
               </li>
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="tel:882-587-3025"
-                  >882-587-3025</a
-                >
+                <a class="footer-nav__link" href="tel:882-587-3025">882-587-3025</a>
               </li>
               <li class="footer-nav__item">
-                <a class="footer-nav__link" href="#"
-                  >6116 Willa River Suite 610</a
-                >
+                <a class="footer-nav__link" href="#">6116 Willa River Suite 610</a>
               </li>
             </ul>
           </nav>
@@ -365,11 +396,7 @@
             <h3 class="footer-form__title">ПОДПИСАТЬСЯ НА НОВОСТИ</h3>
             <p class="footer-form__descr">Duis autem vel eum</p>
             <div class="footer-form__input-wraper">
-              <input
-                class="footer-form__input"
-                type="email"
-                placeholder="Email"
-              />
+              <input class="footer-form__input" type="email" placeholder="Email" />
               <button class="footer-form__button">подписаться</button>
             </div>
           </form>
@@ -382,7 +409,7 @@
           <p class="footer__copy-text">©2021 - Form | All right reserved</p>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./index.js" type="modules"></script>
   </body>
 </html>
