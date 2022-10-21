@@ -7,11 +7,6 @@ const productsSliderItem = document.querySelector(".products-slider__item");
 // ? Динамическое получаение ширины слайдера
 let productsWrapperWidth = window.getComputedStyle(productsSliderItem).width;
 let productsGapSize = window.getComputedStyle(productsSliderWrapper).columnGap;
-// window.addEventListener("resize", () => ({
-//     productsWrapperWidth = window.getComputedStyle(productsSliderItem).width
-//     productsGapSize = window.getComputedStyle(productsSliderWrapper).columnGap;
-//         }
-//     ));
 window.addEventListener("resize", () => {
   productsWrapperWidth = window.getComputedStyle(productsSliderItem).width;
   productsGapSize = window.getComputedStyle(productsSliderWrapper).columnGap;

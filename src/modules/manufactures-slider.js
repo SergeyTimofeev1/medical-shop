@@ -5,8 +5,8 @@ const manufacturesSliderWrapper = document.querySelector(".slider-manufactures__
 const manufacturesSliderItem = document.querySelector(".slider-manufactures__item");
 
 // ? Динамическое получаение ширины слайдера
-let manufacturesWrapperWidth = window.getComputedStyle(manufacturesSliderItem).width;
-window.addEventListener("resize", () => (manufacturesWrapperWidth = window.getComputedStyle(manufacturesSliderItem).width));
+let manufacturesItemWidth = window.getComputedStyle(manufacturesSliderItem).width;
+window.addEventListener("resize", () => (manufacturesItemWidth = window.getComputedStyle(manufacturesSliderItem).width));
 
 // ? Обработка события нажатия на кнопки
 manufacturesSiderHeader.addEventListener("click", (e) => {
@@ -23,14 +23,14 @@ manufacturesSiderHeader.addEventListener("click", (e) => {
 
 function onPrevClick() {
   manufacturesSliderWrapper.scrollBy({
-    left: -parseInt(manufacturesWrapperWidth),
+    left: -parseInt(manufacturesItemWidth),
     behavior: "smooth",
   });
 }
 
 function onNextClick() {
   manufacturesSliderWrapper.scrollBy({
-    left: parseInt(manufacturesWrapperWidth),
+    left: parseInt(manufacturesItemWidth),
     behavior: "smooth",
   });
 }

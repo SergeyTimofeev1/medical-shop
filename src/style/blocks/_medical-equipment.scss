@@ -78,11 +78,13 @@
     background-color: transparent;
   }
   &__btn-left {
+    cursor: pointer;
     @extend %arrow-left;
     top: 50%;
     left: 0;
   }
   &__btn-right {
+    cursor: pointer;
     @extend %arrow-right;
     top: 50%;
     right: 10%;
@@ -90,11 +92,4 @@
       right: 2%;
     }
   }
-}
-
-// Стили для слайдера
-
-.hide-left {
-  transform: translateX(-100%);
-  // opacity: 0;
 }
