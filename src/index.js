@@ -3,6 +3,8 @@ import "./index.scss";
 import "./modules/header-catalog.js";
 import "./modules/header-menu-mobile.js";
 import "./modules/medical-slider";
+import "./modules/manufactures-slider";
+import "./modules/products-slider";
 import { $ } from "./modules/base.js";
 import { modal, _createModal } from "./modules/modal.js";
 

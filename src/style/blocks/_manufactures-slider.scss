@@ -7,7 +7,7 @@
   &__inner {
     @extend %flex;
     @include adaptiv-value("height", 205, 100);
-    padding: 0 55px;
+    padding: 0 5px;
     overflow: scroll;
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
